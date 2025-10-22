@@ -1,0 +1,199 @@
+.about-section-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+}
+
+.about-text {
+  flex: 1.2;
+  color: #FFFFFF;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.about-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: #FFFFFF;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  max-width: 600px;
+}
+
+.technologies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tech-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.tech-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.tech-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.about-image-section {
+  flex: 0.8;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.placeholder-content {
+  text-align: center;
+  color: #666666;
+}
+
+.placeholder-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Responsividade - Tablet */
+@media (max-width: 1024px) {
+  .about-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .about-text {
+    padding: 40px 30px;
+  }
+  
+  .about-image-section {
+    padding: 40px 30px;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1rem;
+  }
+  
+  .technologies-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 15px;
+  }
+  
+  .tech-item {
+    padding: 15px;
+  }
+  
+  .tech-icon {
+    font-size: 1.5rem;
+  }
+  
+  .tech-name {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsividade - Mobile */
+@media (max-width: 768px) {
+  .about-text {
+    padding: 30px 20px;
+  }
+  
+  .about-image-section {
+    padding: 30px 20px;
+  }
+  
+  .about-title {
+    font-size: 1.5rem;
+  }
+  
+  .about-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+  
+  .technologies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 12px;
+  }
+  
+  .tech-item {
+    padding: 12px;
+  }
+  
+  .tech-icon {
+    font-size: 1.2rem;
+  }
+  
+  .tech-name {
+    font-size: 0.7rem;
+  }
+  
+  .image-placeholder {
+    min-height: 300px;
+  }
+  
+  .placeholder-text {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,67 @@
+.scroll-down {
+  position: fixed;
+  right: var(--margin-sides);
+  bottom: var(--margin-bottom);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #FFFFFF;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.scroll-arrow {
+  font-size: 20px;
+  animation: bounce 2s infinite;
+  margin-bottom: 10px;
+}
+
+.scroll-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.scroll-down:hover {
+  opacity: 0.7;
+}
+
+/* Estilos quando estiver na seção Contact */
+.scroll-down.at-contact .scroll-arrow {
+  animation: bounce-up 2s infinite;
+}
+
+@keyframes bounce-up {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+/* Responsividade - Mobile */
+@media (max-width: 768px) {
+  .scroll-down {
+    display: none;
+  }
+}

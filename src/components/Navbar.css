@@ -1,0 +1,126 @@
+.navbar {
+  position: fixed;
+  top: var(--margin-top);
+  right: var(--margin-sides);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 40px;
+}
+
+.navbar-links button {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.navbar-links button:hover {
+  color: #CCCCCC;
+}
+
+.navbar-links button::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FFFFFF;
+  transition: width 0.3s ease;
+}
+
+.navbar-links button:hover::after {
+  width: 100%;
+}
+
+/* Mobile Menu */
+.mobile-menu-button {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.mobile-menu-button span {
+  width: 25px;
+  height: 3px;
+  background-color: #FFFFFF;
+  margin: 3px 0;
+  transition: 0.3s;
+  display: block;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.mobile-menu button {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 10px 0;
+  text-align: left;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu button:hover {
+  color: #CCCCCC;
+}
+
+/* Responsividade - Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    right: var(--margin-sides);
+  }
+  
+  .navbar-links {
+    display: none;
+  }
+  
+  .mobile-menu-button {
+    display: flex;
+  }
+  
+  .mobile-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}

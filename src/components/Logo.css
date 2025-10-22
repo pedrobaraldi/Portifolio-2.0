@@ -1,0 +1,26 @@
+.logo {
+  position: fixed;
+  top: var(--margin-top);
+  left: var(--margin-sides);
+  z-index: 1000;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* Responsividade - Tablet */
+@media (max-width: 1024px) {
+  .logo-image {
+    height: 35px;
+  }
+}
+
+/* Responsividade - Mobile */
+@media (max-width: 768px) {
+  .logo-image {
+    height: 30px;
+  }
+}
