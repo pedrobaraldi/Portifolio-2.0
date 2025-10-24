@@ -18,7 +18,7 @@
 
 .contact-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -26,10 +26,10 @@
 }
 
 .contact-separator {
-  width: 60px;
+  width: 325px;
   height: 2px;
   background-color: #FFFFFF;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .contact-details {
@@ -41,9 +41,9 @@
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 30px;
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   color: #FFFFFF;
 }
 
@@ -53,8 +53,8 @@
 }
 
 .form-section {
-  flex: 0.8;
-  padding: 60px 40px;
+  flex: 1;
+  padding: 60px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,11 +88,12 @@
 .form-input::placeholder,
 .form-textarea::placeholder {
   color: #666666;
+
 }
 
 .form-textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 180px;
 }
 
 .submit-button {
@@ -100,6 +101,7 @@
   color: #000000;
   border: none;
   border-radius: 8px;
+  width: 100%;
   padding: 15px 30px;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -173,4 +175,63 @@
     padding: 12px 24px;
     font-size: 14px;
   }
+}
+
+/* Status Messages */
+.status-message {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 15px;
+}
+
+.status-message.visible {
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+  margin-top: 15px;
+  padding: 10px 15px;
+}
+
+.status-message.success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.status-message.error {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Loading State */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.submit-button:disabled {
+  position: relative;
+  opacity: 0.8;
+}
+
+.submit-button:disabled::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  border: 2px solid #000000;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
 }

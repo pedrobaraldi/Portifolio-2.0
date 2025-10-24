@@ -11,16 +11,16 @@
 .section-number {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 12rem;
+  font-size: 9rem;
   color: #FFFFFF;
   line-height: 1;
 }
 
 .section-line {
-  width: 160px;
+  width: 120px;
   height: 8px;
   background-color: #FFFFFF;
-  margin-top: 30px;
+  margin-top: 15px;
 }
 
 /* Responsividade - Tablet */

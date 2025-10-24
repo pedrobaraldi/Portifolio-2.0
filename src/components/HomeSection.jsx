@@ -1,5 +1,6 @@
 import React from 'react';
 import './HomeSection.css';
+import Fotoperfil from  '../assets/Profile-Home.png';
 
 const HomeSection = () => {
   return (
@@ -7,18 +8,18 @@ const HomeSection = () => {
       <div className="home-content">
         <div className="home-image-section">
           <div className="image-container">
-            <div className="image-placeholder">
+            
               <div className="placeholder-content">
-                <span className="placeholder-text">Your Photo Here</span>
+                <span className="placeholder-text"><img src={Fotoperfil} alt="Foto de perfil" /></span>
               </div>
-            </div>
+            
             <div className="image-overlay"></div>
           </div>
         </div>
         
         <div className="home-text-section">
           <div className="text-content">
-            <h1 className="main-title">CREATIVE</h1>
+            <h1 className="main-title">Front-end</h1>
             <h2 className="sub-title">DEVELOPER</h2>
             <p className="tagline">SENSIBLE TO FRONTEND</p>
           </div>
